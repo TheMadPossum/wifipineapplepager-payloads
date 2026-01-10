@@ -8,7 +8,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/Platform-WiFi%20Pineapple%20Pager-00d4aa?style=flat-square" />
-<img src="https://img.shields.io/badge/Version-1.5.0-blue?style=flat-square" />
+<img src="https://img.shields.io/badge/Version-1.5.1-blue?style=flat-square" />
 <img src="https://img.shields.io/badge/Author-JustSomeTrout-purple?style=flat-square" />
 </p>
 <p align="center">
@@ -57,6 +57,8 @@ No more fumbling with D-pad navigation or manual file transfers. Just point, cli
 | **Background Service Mode** | Run Nautilus as a persistent background service that survives payload exit |
 | **Foreground Mode** | Classic mode - payload stays running until you press B to exit |
 | **Service Management** | Re-run payload to stop the service when running in background mode |
+| **Virtual Button Panel** | Web-based D-pad and A/B buttons for payloads using `WAIT_FOR_INPUT` or `WAIT_FOR_BUTTON_PRESS` |
+| **Smart Button Filtering** | Only allowed buttons are clickable - others are dimmed and disabled |
 
 <p align="center">
 <img width="600" height="4" alt="" src="https://github.com/user-attachments/assets/8560a6c9-b1f1-4eed-ac94-bd9e14d36ac5" />
@@ -65,8 +67,8 @@ No more fumbling with D-pad navigation or manual file transfers. Just point, cli
 ## Features
 
 ### Run Modes
-- **Background Service**: Run Nautilus as a persistent service that survives payload exit (press A at startup)
-- **Foreground Mode**: Classic mode where payload stays running until you press B to exit (press B at startup)
+- **Background Service**: Run Nautilus as a persistent service that survives payload exit (select Yes at startup)
+- **Foreground Mode**: Classic mode where payload stays running until you press B to exit (select No at startup)
 - **Service Management**: Re-run the payload to stop the service when running in background mode
 
 ### Core Functionality

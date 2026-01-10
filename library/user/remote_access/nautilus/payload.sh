@@ -3,7 +3,7 @@
 # Title: Nautilus
 # Description: Web-based payload launcher with live console output and GitHub integration
 # Author: JustSomeTrout (Trout / troot.)
-# Version: 1.5.0
+# Version: 1.5.1
 # Firmware: Developed for Firmware version 1.0.4
 #
 # Runs uhttpd with CGI to browse and execute payloads from your browser.
@@ -31,7 +31,7 @@ LOG "cyan" '|║║║╠═╣║-║-║-║║--║-║╚═╗|'
 LOG "cyan" '|╝╚╝╩-╩╚═╝-╩-╩╩═╝╚═╝╚═╝|'
 LOG "cyan" '+======================+'
 LOG ""
-LOG "v1.5.0"
+LOG "v1.5.1"
 LOG ""
 LOG "yellow" '|   ~ Web Payload Launcher ~    |'
 LOG ""
@@ -46,6 +46,7 @@ if [ -f "$INIT_SCRIPT" ] && "$INIT_SCRIPT" running 2>/dev/null; then
         LOG "yellow" "Stopping service..."
         "$INIT_SCRIPT" stop
         "$INIT_SCRIPT" disable
+        rm -f "$INIT_SCRIPT"
         LOG "cyan" "Service stopped"
     fi
     exit 0
@@ -160,6 +161,7 @@ cleanup() {
     rm -f /tmp/nautilus_response
     rm -f /tmp/nautilus_output.log
     rm -f /tmp/nautilus_cache.json
+    rm -f /tmp/nautilus_auth_session
     LOG "cyan" "Nautilus stopped."
 }
 trap cleanup EXIT INT TERM
