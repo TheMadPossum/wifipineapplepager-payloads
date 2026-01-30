@@ -63,7 +63,7 @@ On first execution, the script:
 - Logs any missing dependencies
 - Writes a first‑run flag to prevent repeated checks
 
-This ensures stability without impacting runtime performance.
+This ensures stability without impacting runtime performance. 
 
 ---
 
